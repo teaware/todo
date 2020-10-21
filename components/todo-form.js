@@ -20,7 +20,7 @@ export default function TodoForm() {
           name="todo"
           value={todo}
           placeholder="ex. Learn about authentication in Next.js"
-          className=" appearance-none border border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg "
+          className="appearance-none border border-gray-300 p-2 focus:outline-none focus:border-gray-500 rounded-md "
           onChange={(e) => setTodo(e.target.value)}
         />
       </div>

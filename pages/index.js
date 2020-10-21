@@ -13,33 +13,44 @@ export default function Home({ initialTodos, user }) {
   }, []);
 
   return (
-    <div className="max-w-xl m-auto p-2">
+    <div className="px-4">
       <Head>
-        <title>My Todo App</title>
+        <title>Simple Todos</title>
       </Head>
 
       <main>
         <nav>
-          <div className="flex items-center justify-between py-4  ">
-            <div className="flex justify-between items-center">
-              <div className="text-2xl font-bold text-gray-800 md:text-3xl">
-                <a href="#">My Todos</a>
-              </div>
+          {user ? (
+            <div className="flex justify-center">
+              <img
+                src={user.picture}
+                alt="Profile"
+                className="w-16 h-16 rounded-full mb-6"
+              />
             </div>
-            <div className="flex">
+          ) : (
+            ""
+          )}
+          <div className="flex justify-between items-center">
+            <div className="text-2xl font-bold text-gray-800 md:text-3xl">
+              <span className="cursor-default bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400 hover:from-teal-400 hover:to-blue-500">
+                Simple Todos
+              </span>
+            </div>
+            <div>
               {user ? (
                 <a
                   href="/api/logout"
-                  className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
+                  className="font-semibold text-teal-500 hover:text-teal-600 transition ease-in-out duration-150"
                 >
                   Logout
                 </a>
               ) : (
                 <a
                   href="/api/login"
-                  className="rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
+                  className="font-semibold text-teal-500 hover:text-teal-600 transition ease-in-out duration-150"
                 >
-                  Login
+                  Login →
                 </a>
               )}
             </div>
@@ -53,7 +64,9 @@ export default function Home({ initialTodos, user }) {
             </ul>
           </>
         ) : (
-          <p className="text-center mt-4">Please login to save todos!</p>
+          <p className="text-center text-xl mt-16">
+            Please login to save todos!
+          </p>
         )}
       </main>
     </div>
