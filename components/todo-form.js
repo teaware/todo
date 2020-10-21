@@ -28,7 +28,7 @@ export default function TodoForm() {
         type="submit"
         className=" w-full rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
       >
-        Submit
+        Add
       </button>
     </form>
   );

@@ -4,8 +4,8 @@ export default initAuth0({
   domain: process.env.AUTH0_DOMAIN,
   clientId: process.env.AUTH0_CLIENT_ID,
   clientSecret: process.env.AUTH0_SECRET,
-  redirectUri: "http://localhost:3000/api/callback",
-  postLogoutRedirectUri: "http://localhost:3000/",
+  redirectUri: "https://atodo.vercel.app/api/callback",
+  postLogoutRedirectUri: "https://atodo.vercel.app/",
   scope: "openid profile",
   session: {
     // The secret used to encrypt the cookie.

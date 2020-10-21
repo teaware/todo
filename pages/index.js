@@ -15,7 +15,7 @@ export default function Home({ initialTodos, user }) {
   return (
     <div className="max-w-xl m-auto p-2">
       <Head>
-        <title>My Todo CRUD App</title>
+        <title>My Todo App</title>
       </Head>
 
       <main>
